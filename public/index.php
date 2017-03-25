@@ -1,19 +1,9 @@
 <?php
 
-require "../vendor/autoload.php";
+require_once "../vendor/autoload.php";
+require_once "config.php";
+require_once "service.php";
 
-use Pimple\Container;
+$list = $container['ServiceProduct']->select();
 
-$container = new Container();
-
-$container['conn'] = function () {
-    return new \Source\Conn("mysql:host=localhost;dbname=course_oo","root","");
-};
-
-$container['product'] = function ($c) {
-    return new \Source\Product($c['conn']);
-};
-
-$list = $container['product']->listing();
-
-var_dump($list);
+require_once "list.product.php";

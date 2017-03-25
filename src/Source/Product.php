@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: wdrik
- * Date: 20/03/2017
- * Time: 22:16
- */
-
 namespace Source;
 
 class Product

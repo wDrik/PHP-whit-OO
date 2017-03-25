@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: wdrik
- * Date: 22/03/2017
- * Time: 19:39
- */
-
 namespace Source;
 
 class Conn implements IConn

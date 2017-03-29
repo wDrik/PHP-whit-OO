@@ -9,6 +9,6 @@ interface IProduct
     public function setId($id);
     public function getName();
     public function setName($name);
-    public function getDesc();
-    public function setDesc($desc);
+    public function getDescription();
+    public function setDescription($desc);
 }

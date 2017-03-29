@@ -24,12 +24,11 @@ class ServiceProduct implements IServiceProduct
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    public function save()
     //Select a single record in the database
     public function find($id)
     {
-        $query = "SELECT * FROM  `products` WHERE `id`=:id";
-        $stmt = $this->db->prepare($query);
+        $query  = "SELECT * FROM  `products` WHERE `id`=:id";
+        $stmt   = $this->db->prepare($query);
         $stmt->bindValue(":id", $id);
         $stmt->execute();
 
